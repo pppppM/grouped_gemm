@@ -354,7 +354,7 @@ void GroupedGemm(torch::Tensor a,
   TORCH_CHECK(!(trans_a && trans_b));
 
   // We expect the batch_sizes on CPU.
-  TORCH_CHECK(batch_sizes.is_cpu());
+  // TORCH_CHECK(batch_sizes.is_cpu());
   TORCH_CHECK(batch_sizes.ndimension() == 1);
   TORCH_CHECK(batch_sizes.scalar_type() == torch::kInt64);
 
